@@ -12,14 +12,15 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "customer")
 public class Customer {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-    @Column(name = "nome", length = 100)
+    @Column(name = "name", length = 100)
     private String name;
 
     @Column(name = "cpf", length = 11)

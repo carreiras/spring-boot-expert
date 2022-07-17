@@ -20,14 +20,14 @@ public class SalesOrder {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
     @Column(name = "order_date")
-    private LocalDate order_Date;
+    private LocalDate order_date;
 
     @Column(name = "total", precision = 20, scale = 2)
     private BigDecimal total;
